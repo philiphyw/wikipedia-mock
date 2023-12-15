@@ -1,7 +1,14 @@
-<ng-container *ngIf="pages && pages.length>0">
-<ul>
-    <li *ngFor="let page of pages">
-    {{ page.title }}
-    </li>
-</ul>
-</ng-container>
+<table *ngIf="pages && pages.length>0">
+<thead>
+    <th>Title</th>
+    <th>Size</th>
+    <th>WordCount</th>
+</thead>
+<tbody>
+    <tr *ngFor="let page of pages">
+    <td>{{page.title}}</td>
+    <td>{{page.size |  number}}</td>
+    <td>{{page.wordcount}}</td>
+    </tr>
+</tbody>
+</table>

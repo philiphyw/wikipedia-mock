@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WikipediaService } from './services/wikipedia.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wikipedia-mock';
+
+  constructor(private wikipediaService:WikipediaService){}
+
+  onSearchBarSubmit(value:string) {
+
+    if(value){
+     const result = this.wikipediaService.search(value);
+    console.log(result);
+    }
+  }
+
 }

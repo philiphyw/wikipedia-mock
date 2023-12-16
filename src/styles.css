@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bulma/css/bulma.css';
+
+
+
+
+/* styles for dynamic classes in fetched page snippet*/
 .searchmatch {
 
     font-weight: 600;

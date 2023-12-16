@@ -1,14 +1,14 @@
-<table *ngIf="pages && pages.length>0">
+<table *ngIf="pages && pages.length>0" class="table is-striped">
 <thead>
     <th>Title</th>
-    <th>Size</th>
     <th>WordCount</th>
+    <th>Snippet</th>
 </thead>
 <tbody>
     <tr *ngFor="let page of pages">
     <td>{{page.title}}</td>
     <td>{{page.size |  number}}</td>
-    <td>{{page.wordcount}}</td>
+    <td [innerHTML]="page.snippet"></td>
     </tr>
 </tbody>
 </table>

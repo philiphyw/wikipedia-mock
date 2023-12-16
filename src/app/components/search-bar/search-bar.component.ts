@@ -11,6 +11,7 @@ export class SearchBarComponent {
 
   onInput(event: any): void {
     if(event.target.value) this.term = event.target.value;
+    console.log(this.term);
     
   }
 

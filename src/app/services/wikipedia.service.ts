@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { map} from 'rxjs';
 import { WikipediaResponse } from '../shared/wikipedia.model';
 
 @Injectable({
@@ -19,6 +19,8 @@ export class WikipediaService {
         srsearch: term,
         origin: '*',
       },
-    }).pipe(map(res=>res.query.search))
+    }).pipe(
+      map(res=>res?.query?.search)
+      )
   }
 }
